@@ -31,6 +31,7 @@ spec:
         project: roboshop
         tier: app
     spec:
+      serviceAccountName: user # istio service account name
       containers:
       - name: user
         image: "{{ .Values.deployment.imageURL }}:{{ .Values.deployment.imageVersion }}"
